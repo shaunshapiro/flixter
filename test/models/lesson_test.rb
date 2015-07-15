@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class LessonTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
+  
+  # test "lesson creation" do
+  #   lesson = FactoryGirl.create(:lesson)
   # end
 end
