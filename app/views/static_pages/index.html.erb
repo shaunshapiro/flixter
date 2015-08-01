@@ -14,15 +14,24 @@
 
 <br />
 <div class"col-xs-10 col-xs-offset-1 features text-center">
-	<div class="col-sm-4 text-center">
-		<h3>Feature 1</h3>
+	<div class="col-sm-4 text-center front_page_button">
+		<%= link_to courses_path do %>
+		  <%= image_tag 'learn.png', :class => 'front_page_button' %>
+		  <h3>Learn something new</h3>  
+		<% end %>
 	</div>
 
-	<div class="col-sm-4 text-center">
-		<h3>Feature 2</h3>
+	<div class="col-sm-4 text-center front_page_button">
+		<%= link_to new_instructor_course_path do %>
+		  <%= image_tag 'teach.png' %>
+		  <h3>Teach something cool</h3>		  
+		<% end %>
 	</div>
 
-	<div class="col-sm-4 text-center">
-		<h3>Feature 3</h3>
+	<div class="col-sm-4 text-center front_page_button">
+		<%= link_to profit_path do %>
+		  <%= image_tag 'dollar.png', :class => 'front_page_button' %>
+		  <h3>Profit</h3>	  
+		<% end %>
 	</div>
 </div>
