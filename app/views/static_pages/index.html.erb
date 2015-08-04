@@ -1,3 +1,34 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script>
+		    $(function() {
+
+		    	var h1Element = $('h1');
+		    	var h2Element = $('h2');
+
+		    	var headlines = ["Learn Magic From the Pros", "Learn to Cook Competently in Minutes", "Feed Your Inner Curiosity"];
+
+		    	var quotes = ["I'm an Illusionist, Michael.", "Stop Burning that Toast", "Learn Something New Every Day"];
+
+		    	var quoteNum = 0;
+		    	setInterval(function() {
+		    		if (quoteNum == 0) {
+		    			quoteNum = 1;
+		    		}
+		    		else if (quoteNum == 1) {
+		    			quoteNum = 2;
+		    		}
+		    		else if (quoteNum == 2) {
+		    			quoteNum = 0;
+		    		}
+		    		h1Element.html(headlines[quoteNum]);
+		    		h2Element.html(quotes[quoteNum]);
+
+		    	}, 5000);		      		
+            }); 
+</script>
+
+
 <div class="hero">
 	<br />
 
@@ -16,7 +47,7 @@
 <div class"col-xs-10 col-xs-offset-1 features text-center">
 	<div class="col-sm-4 text-center front_page_button">
 		<%= link_to courses_path do %>
-		  <%= image_tag 'learn.png', :class => 'front_page_button' %>
+		  <%= image_tag 'learn.png' %>
 		  <h3>Learn something new</h3>  
 		<% end %>
 	</div>
@@ -30,7 +61,7 @@
 
 	<div class="col-sm-4 text-center front_page_button">
 		<%= link_to profit_path do %>
-		  <%= image_tag 'dollar.png', :class => 'front_page_button' %>
+		  <%= image_tag 'dollar.png' %>
 		  <h3>Profit</h3>	  
 		<% end %>
 	</div>
