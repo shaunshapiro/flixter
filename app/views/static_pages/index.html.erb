@@ -21,8 +21,8 @@
 		    		else if (quoteNum == 2) {
 		    			quoteNum = 0;
 		    		}
-		    		h1Element.html(headlines[quoteNum]);
-		    		h2Element.html(quotes[quoteNum]);
+		    		$(h1Element.html(headlines[quoteNum])).fadeIn(1000).delay(2000).fadeOut(1500).delay(2000);
+		    		$(h2Element.html(quotes[quoteNum])).fadeIn(1000).delay(2000).fadeOut(1500).delay(2000);
 
 		    	}, 5000);		      		
             }); 
@@ -37,10 +37,13 @@
         <h1>Learn Magic from the Pros</h1>
         <br />
         <h2>I'm an illusionist, Michael</h2>
-        <br />
-        <%= link_to 'Learn More', courses_path, :class => 'btn btn-success' %>
-        <br /><br />
+        <br />    
     </div>
+    
+    <div class="learn_more col-xs-2 col-xs-offset-5 text-center">
+    	<%= link_to 'Learn More', courses_path, :class => 'btn btn-success' %>
+    </div>
+    <br /><br />
 </div>
 
 <br />
